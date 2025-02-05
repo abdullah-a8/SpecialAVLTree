@@ -6,6 +6,8 @@ Initially, I thought of an algorithm based on how a traditional AVL tree balance
 
 The abstract idea was to take a sorted array and construct the AVL tree by selecting the middle (or upper-middle) element as the root node. Then, I would recursively apply the same logic: selecting the middle (or upper-middle) element of the left subarray as the left child and the middle (or upper-middle) element of the right subarray as the right child.
 
+![alt text](Images/cs23109_avl_search.gif)
+
 While the logic for choosing root and child nodes was correct, I faced a problem when trying to balance the tree using local rotations. My goal was to create a **"Verbatim Binary Search Special AVL Tree,"** but local rotations failed in certain edge cases. Specifically, if the program encountered difficulty determining the correct median of the array, it would get stuck in an infinite loop, oscillating between elements without settling on the correct median.
 
 This made me realize that while the idea of optimizing the tree with minimal rotations sounded good on paper, it was not practical due to these edge cases. So, I went back to the drawing board and came up with a much simpler but naive solution. While not optimal in terms of time complexity, it worked reliably.
@@ -166,8 +168,16 @@ vector<AVLNode<T>*> getSearchPath(T key) {
 
 For the animation and visualization of my simulator, I used the **SFML library in C++**, which is a well-known graphics library for C++. I also utilized keyboard input and mouse detection functionalities from SFML to allow users to insert a new element into the tree and visualize it on the screen.
 
+![alt text](Images/cs23109_avl_tree.gif)
+
 Users can input an element to search for in the tree, and the program will highlight the path taken to find it. This helped me confirm that the search path in my special AVL tree matches exactly with the path followed in a binary search on a sorted array when looking for the same element.
+
+![alt text](Images/cs23109_path_highlighting.gif)
 
 To verify this, I implemented a simple C++ binary search program that prints the path to a searched element. The results for elements **75, 54, and 110** confirm that the special AVL tree follows the exact same path as binary search in an array.
 
+
+
 Lastly, the visualizer also shows the **real-time insertion of new elements** and how the structure adjusts itself to maintain balance.
+
+![alt text](Images/cs23109_avl_insert.gif)
