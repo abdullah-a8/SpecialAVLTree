@@ -49,13 +49,18 @@ int main() {
         85, 90, 95, 100, 110
     };
 
-    int target = 110;
-    int index = binarySearch(arr, target);
+    int target;
+    while (true) {
+        cout << "Enter the element to search (0 to exit): ";
+        cin >> target;
+        if (target == 0) break;
 
-    if (index != -1) {
-        cout << "Element " << target << " found at index " << index << endl;
-    } else {
-        cout << "Element not found" << endl;
+        int index = binarySearch(arr, target);
+        if (index != -1) {
+            cout << "Element " << target << " found at index " << index << endl;
+        } else {
+            cout << "Element not found" << endl;
+        }
     }
 
     return 0;
