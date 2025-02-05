@@ -181,3 +181,7 @@ To verify this, I implemented a simple C++ binary search program that prints the
 Lastly, the visualizer also shows the **real-time insertion of new elements** and how the structure adjusts itself to maintain balance.
 
 ![alt text](Images/cs23109_avl_insert.gif)
+
+---
+
+DAA - Assignment 02 - BSCS23109
