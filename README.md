@@ -14,6 +14,12 @@ In this new approach, I completely discarded rotations. Instead, every time a ne
 
 With my initial approach, I was aiming for a time complexity of **O(log n),** but with this new approach, the average complexity is **O(n)** since the tree is rebuilt on every insertion. It’s not the most efficient solution, but at least it works in most cases.
 
+## The Superiority of Local Rotations
+
+The logic behind local rotations in AVL trees is fundamentally more optimized than the current approach because it preserves balance dynamically without requiring a full reconstruction of the tree. In a standard AVL tree, rotations ensure that the tree maintains a logarithmic height of O(log n), allowing insertions and deletions to be handled in O(log n) time as well. This localized restructuring prevents unnecessary overhead and minimizes redundant operations, making it far more efficient in terms of time complexity compared to a full rebuild.
+
+However, my current approach, while more intuitive and guaranteeing a perfectly balanced tree, suffers from significant performance drawbacks. The requirement to rebuild the tree from scratch on every insertion or deletion increases both time and space complexity. Despite being suboptimal in efficiency, it is a more reliable and predictable approach that avoids the pitfalls of edge cases encountered with rotation-based balancing.
+
 ---
 
 ## Implementation in Computer Code
