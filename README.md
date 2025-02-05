@@ -184,4 +184,4 @@ Lastly, the visualizer also shows the **real-time insertion of new elements** an
 
 ---
 
-DAA - Assignment 02 - BSCS23109
+### **DAA - Assignment 02 - BSCS23109**
