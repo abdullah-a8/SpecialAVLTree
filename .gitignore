@@ -1,0 +1,11 @@
+# Ignore all compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+*.bin
+*.class
+*.so
+*.dll
+
+.vscode/
