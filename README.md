@@ -6,7 +6,7 @@ Initially, I thought of an algorithm based on how a traditional AVL tree balance
 
 The abstract idea was to take a sorted array and construct the AVL tree by selecting the middle (or upper-middle) element as the root node. Then, I would recursively apply the same logic: selecting the middle (or upper-middle) element of the left subarray as the left child and the middle (or upper-middle) element of the right subarray as the right child.
 
-![alt text](Images/cs23109_avl_search.gif)
+![alt text](Images/cs23109_ideaBehindAlgo.png)
 
 While the logic for choosing root and child nodes was correct, I faced a problem when trying to balance the tree using local rotations. My goal was to create a **"Verbatim Binary Search Special AVL Tree,"** but local rotations failed in certain edge cases. Specifically, if the program encountered difficulty determining the correct median of the array, it would get stuck in an infinite loop, oscillating between elements without settling on the correct median.
 
