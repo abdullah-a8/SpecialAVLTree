@@ -176,7 +176,7 @@ Users can input an element to search for in the tree, and the program will highl
 
 To verify this, I implemented a simple C++ binary search program that prints the path to a searched element. The results for elements **75, 54, and 110** confirm that the special AVL tree follows the exact same path as binary search in an array.
 
-
+![alt text](Images/BinarySearchVerification.png)
 
 Lastly, the visualizer also shows the **real-time insertion of new elements** and how the structure adjusts itself to maintain balance.
 
